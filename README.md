@@ -34,7 +34,7 @@ With **ipywidgets** interactive controls, users can adjust algorithm parameters 
 You can run the notebook directly in your browser without installing anything locally. The interactive demo is available via **Binder** or **Hugging Face Spaces**. Click the badges below to launch the demo:
 
 **Binder:**  
-[![Binder](https://img.shields.io/badge/Binder-Open%20on%20Binder-blue?style=for-the-badge&logo=mybinder&logoColor=white)](https://mybinder.org/v2/gh/Kaftow/dbscan-animator/main?urlpath=voila%2Frender%2Fdbscan_visual_demo.ipynb)
+[![Binder](https://img.shields.io/badge/Binder-Open%20on%20Binder-blue?style=for-the-badge&logo=mybinder&logoColor=white)](https://mybinder.org/v2/gh/Kaftow/dbscan-animator/main?urlpath=voila%2Frender%2Fbuild%2Fdbscan_animator_for_display.ipynb)
 
 **Hugging Face Spaces:**  
 [![Hugging Face Spaces](https://img.shields.io/badge/Hugging%20Face%20Spaces-Open-orange?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/new-space?template=Kaftow/dbscan-animator)
@@ -70,22 +70,28 @@ To run this project locally, make sure your environment has the following Python
     ```bash
     pip install -r requirements.txt
     ```
-
-3.  **Enable interactive plots (optional):**
-The notebook uses `%matplotlib widget`. To enable this, install `ipympl`:
-`bash
-    pip install ipympl
-    `
 </details>
 
 ### Run the Notebook
 
-1.  **Launch Jupyter:**
-    ```bash
-    jupyter lab   # or jupyter notebook
-    ```
-2.  **Open and run the notebook:**
-    Open `dbscan_visual_demo.ipynb` and run the cells. Use the control panel to adjust parameters and click **Run Interact** to start the animation.
+1.  **Edit the notebook:**
+   Open `dbscan_animator.ipynb` in the `src` directory and run the cells in order. Adjust parameters via the control panel, then click `Run Interact` to start the animation.
+
+2.  **Display with Voila locally:**
+  The source notebook contains Markdown cells and outputs that may affect its appearance when served with Voila. It is recommended to create a cleaned copy with Markdown cells removed and outputs cleared beforing serving it with Voila:
+
+  ```bash
+  jq '(.cells |= map(select(.cell_type != "markdown") | .outputs = [] | .execution_count = null))' \
+    src/dbscan_animator.ipynb > build/dbscan_animator_for_display.ipynb
+  ```
+
+  Then run:
+
+  ```bash
+  voila build/dbscan_animator_for_display.ipynb
+  ```
+
+  Open http://localhost:8866 to view the demo.
 
 ---
 

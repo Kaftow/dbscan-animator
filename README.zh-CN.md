@@ -35,7 +35,7 @@
 
 **Binder**:
 
-[![Binder](https://img.shields.io/badge/Binder-Open%20on%20Binder-blue?style=for-the-badge&logo=mybinder&logoColor=white)](https://mybinder.org/v2/gh/Kaftow/dbscan-animator/main?filepath=dbscan_visual_demo.ipynb)
+[![Binder](https://img.shields.io/badge/Binder-Open%20on%20Binder-blue?style=for-the-badge&logo=mybinder&logoColor=white)](https://mybinder.org/v2/gh/Kaftow/dbscan-animator/main?urlpath=voila%2Frender%2Fbuild%2Fdbscan_animator_for_display.ipynb)
 
 **Hugging Face Spaces**:
 
@@ -75,21 +75,28 @@
     pip install -r requirements.txt
     ```
 
-3.  **启用交互式绘图（可选）：**
-该笔记本使用 `%matplotlib widget` 来实现交互式绘图。如果要启用它，请安装 `ipympl`。
-`bash
-    pip install ipympl
-    `
 </details>
 
-### 运行笔记本
+### 运行和调试笔记本
 
-1.  **启动 Jupyter：**
+1.  **编辑笔记本：**
+    在 `src` 目录中打开 `dbscan_animator.ipynb` 并按顺序运行单元。通过控制面板调整参数后，点击 **Run Interact** 启动动画并观察结果。
+
+2.  **在本地使用 Voila 展示：**
+    默认的笔记本包含大量 Markdown 单元和输出，在直接用 Voila 展示时可能影响观感。建议先生成一个去除了 Markdown 单元与输出的副本，再用 Voila 启动：
+
     ```bash
-    jupyter lab   # 或 jupyter notebook
+    jq '(.cells |= map(select(.cell_type != "markdown") | .outputs = [] | .execution_count = null))' \
+      src/dbscan_animator.ipynb > build/dbscan_animator_for_display.ipynb
     ```
-2.  **运行笔记本：**
-    打开 `dbscan_visual_demo.ipynb` 并运行单元格。在控制面板中对参数进行调整后，点击 **Run Interact** 开始动画。
+
+    然后运行：
+
+    ```bash
+    voila build/dbscan_animator_for_display.ipynb
+    ```
+
+    打开 http://localhost:8866 即可查看展示页面。
 
 ---
 
