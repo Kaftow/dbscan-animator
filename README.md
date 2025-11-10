@@ -34,7 +34,7 @@ With **ipywidgets** interactive controls, users can adjust algorithm parameters 
 You can run the notebook directly in your browser without installing anything locally. The interactive demo is available via **Binder** or **Hugging Face Spaces**. Click the badges below to launch the demo:
 
 **Binder:**  
-[![Binder](https://img.shields.io/badge/Binder-Open%20on%20Binder-blue?style=for-the-badge&logo=mybinder&logoColor=white)](https://mybinder.org/v2/gh/Kaftow/dbscan-animator/main?filepath=dbscan_visual_demo.ipynb)
+[![Binder](https://img.shields.io/badge/Binder-Open%20on%20Binder-blue?style=for-the-badge&logo=mybinder&logoColor=white)](https://mybinder.org/v2/gh/Kaftow/dbscan-animator/main?urlpath=voila%2Frender%2Fdbscan_visual_demo.ipynb)
 
 **Hugging Face Spaces:**  
 [![Hugging Face Spaces](https://img.shields.io/badge/Hugging%20Face%20Spaces-Open-orange?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/new-space?template=Kaftow/dbscan-animator)
