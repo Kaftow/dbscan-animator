@@ -27,20 +27,43 @@
 
 通过基于 **ipywidgets** 的交互控件，用户可以实时调整样本点个数、邻域半径和最小点数目在内的算法参数，并能看到基于调整后参数的新聚类动画。
 
+点击下方的按钮即可观看动画效果:
+
+[![Animation Showcase](https://img.shields.io/badge/Animation%20Showcase-Click%20to%20View-blue?style=for-the-badge&logo=mybinder&logoColor=white)](https://mybinder.org/v2/gh/Kaftow/dbscan-animator/main?urlpath=voila%2Frender%2Fdbscan_visual_demo.ipynb)
+
 ---
 
 ## 免安装运行
 
-本项目可直接在浏览器中运行，无需本地安装环境。目前，本项目以支持 **Binder** 和 。点击下方对应按钮，即可在线打开动画演示：
+本项目可直接在浏览器中运行，**无需本地安装环境**。
 
-**Binder**:
+目前支持 **Binder** 和 **Google Colab**两种在线运行方式：
+- Binder 提供交互式、免代码的可视化体验
+- Google Colab 支持完整的 Notebook 编辑与实验功能,并允许你事后保存
 
-[![Binder](https://img.shields.io/badge/Binder-Open%20on%20Binder-blue?style=for-the-badge&logo=mybinder&logoColor=white)](https://mybinder.org/v2/gh/Kaftow/dbscan-animator/main?urlpath=voila%2Frender%2Fbuild%2Fdbscan_animator_for_display.ipynb)
+### **Binder - Voila 版本**
 
-**Hugging Face Spaces**:
+Voila 版本适合希望直接查看和交互动画、而不需要查看代码或 Markdown 的用户。
 
-[![Hugging Face Spaces](https://img.shields.io/badge/Hugging%20Face%20Spaces-Open-orange?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/new-space?template=Kaftow/dbscan-animator)
+点击下方按钮即可启动：
 
+[![Binder Voila](https://img.shields.io/badge/Binder-Voila-blue?style=for-the-badge&logo=mybinder&logoColor=white)](https://mybinder.org/v2/gh/Kaftow/dbscan-animator/main?urlpath=voila%2Frender%2Fdbscan_visual_demo.ipynb)
+
+### **Binder - 原始笔记本**
+
+除 Voila 渲染版外，还可通过下方链接访问完整的 Notebook 版本，
+
+在这一版里，你可查看、编辑全部代码与 Markdown 内容：
+
+[![Binder Notebook](https://img.shields.io/badge/Binder-Notebook-blue?style=for-the-badge&logo=mybinder&logoColor=white)](https://mybinder.org/v2/gh/Kaftow/dbscan-animator/main?filepath=dbscan_visual_demo.ipynb)
+
+### **Google Colab**
+
+ **Google Colab** 版本提供完整的在线 Notebook 环境。
+
+你可以直接在浏览器中运行、修改代码，并将修改保存到你的 Google Drive里：
+
+[![Colab](https://img.shields.io/badge/Colab-Open%20in%20Colab-orange?style=for-the-badge&logo=google-colab&logoColor=white)](https://colab.research.google.com/drive/1PXiiNMHB2bXA8f1UDtxGTtVo6dDa519L?usp=sharing)
 ---
 
 ## 本地运行

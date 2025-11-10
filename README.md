@@ -27,17 +27,39 @@ This repository provides a Jupyter Notebook for interactive visualization and an
 
 With **ipywidgets** interactive controls, users can adjust algorithm parameters in real time—such as the number of sample points, neighborhood radius, and minimum points—and immediately see how these changes affect the clustering results through dynamic animations.
 
+Click the button below to view the animation:
+
+[![Animation Showcase](https://img.shields.io/badge/Animation%20Showcase-Click%20to%20View-blue?style=for-the-badge&logo=mybinder&logoColor=white)](https://mybinder.org/v2/gh/Kaftow/dbscan-animator/main?urlpath=voila%2Frender%2Fdbscan_visual_demo.ipynb)
+
+
 ---
 
 ## Run Online (No Local Installation Required)
 
-You can run the notebook directly in your browser without installing anything locally. The interactive demo is available via **Binder** or **Hugging Face Spaces**. Click the badges below to launch the demo:
+This project can be run entirely in your browser — **no local installation required** — and offers two options for online execution: **Binder** for interactive, code-free visualization, and **Google Colab** for full notebook editing and experimentation.
 
-**Binder:**  
-[![Binder](https://img.shields.io/badge/Binder-Open%20on%20Binder-blue?style=for-the-badge&logo=mybinder&logoColor=white)](https://mybinder.org/v2/gh/Kaftow/dbscan-animator/main?urlpath=voila%2Frender%2Fbuild%2Fdbscan_animator_for_display.ipynb)
+### **Binder - Voila Rendered**
 
-**Hugging Face Spaces:**  
-[![Hugging Face Spaces](https://img.shields.io/badge/Hugging%20Face%20Spaces-Open-orange?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/new-space?template=Kaftow/dbscan-animator)
+For viewers who just want to see and interact with the animations without seeing code or Markdown:
+
+[![Binder Voila](https://img.shields.io/badge/Binder-Voila-blue?style=for-the-badge&logo=mybinder&logoColor=white)](https://mybinder.org/v2/gh/Kaftow/dbscan-animator/main?urlpath=voila%2Frender%2Fdbscan_visual_demo.ipynb)
+
+### **Binder - Original Notebook**
+
+Beyond the Voila-rendered version,there is a fully interactive notebook environment available.
+
+Click here to view, run, and edit all code and Markdown cells within a temporary, interactive environment:
+
+[![Binder Notebook](https://img.shields.io/badge/Binder-Notebook-blue?style=for-the-badge&logo=mybinder&logoColor=white)](https://mybinder.org/v2/gh/Kaftow/dbscan-animator/main?filepath=dbscan_visual_demo.ipynb)
+
+### **Google Colab**
+
+The **Google Colab** version provides a full-featured online Notebook environment.
+
+You can run and modify code directly in your browser, and **save any changes** to your Google Drive:
+
+[![Colab](https://img.shields.io/badge/Colab-Open%20in%20Colab-orange?style=for-the-badge&logo=google-colab&logoColor=white)](https://colab.research.google.com/drive/1PXiiNMHB2bXA8f1UDtxGTtVo6dDa519L?usp=sharing)
+
 
 ---
 
